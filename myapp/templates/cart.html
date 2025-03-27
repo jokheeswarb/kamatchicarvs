@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}My Liked Products{% endblock %}
+{% block content %}
+<style>
+     .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+    .card:hover {
+        transform: scale(1.05); /* Slightly enlarge the card */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for emphasis */
+    }
+    .card-text{
+        text-decoration: none;
+    }
+</style>
+
+<h1 class="text-center">Liked Products</h1>
+
+<div class="container">
+    <div class="row">
+        {% for liked in liked_products %}
+        <div class="col-md-4 my-3">
+            <a href="{% if liked.content_type.model == 'product2d' %}
+                    {% url 'single_product_2d' liked.object_id %}
+                    {% else %}
+                        {% url 'single_product_3d' liked.object_id %}
+                    {% endif %}" class="text-decoration-none">
+                <div class="card h-100">
+                    <img src="{{ liked.product.image.url }}" class="card-img-top" alt="{{ liked.product.name }}" style="width: 100%; height: 300px; object-fit: contain; padding: 10px 0px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ liked.product.name }}</h5>
+                        <p class="card-text">{{ liked.product.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% empty %}
+        <p class="text-center">No liked products yet.</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

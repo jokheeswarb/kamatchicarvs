@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <div class="list-group">
+            <div class="list-group-item my-5" style="box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 8px;">
+                <h3 class="text-center my-3">Welcome to Kamatchi Carvings – Where Art Meets Precision</h3>
+                <p style="text-align: center; padding:0px 10px; font-weight: bold;">At Kamatchi Carvings, we are passionate about transforming raw wood into exquisite works of art that reflect the beauty of nature and the skill of our craftsmen. With over 11 years of experience, we have built a strong reputation as a leading independent company specializing in CNC machine wood carving.</p>
+                <h3>Blending Tradition with Technology</h3>
+                <p style="text-align: justify; padding:0px 10px;">
+                    <img src="{% static 'images/about2.jpg'%}" alt="" class="img-thumbnail float-start" style="width: 200px; margin-right: 20px;">
+                    Wood carving is an art that has been practiced for centuries, and we honor this rich tradition by combining it with the latest advancements in CNC (Computer Numerical Control) technology. Our highly skilled craftsmen and designers work meticulously to bring intricate designs to life, ensuring that every piece is crafted with precision, elegance, and durability.</p>
+                <p style="text-align: justify; padding:0px 10px;">Our process integrates traditional hand-finishing techniques with state-of-the-art CNC machines, allowing us to achieve levels of detail and consistency that would be difficult to replicate by hand alone. This synergy between artistry and technology enables us to create:
+                    <ul style="list-style: none;">
+                        <li><span> ✔ </span>Custom wood carvings for homes, temples, offices, and commercial spaces</li>
+                        <li><span> ✔</span> Decorative panels, furniture carvings, and intricate wall art</li>
+                        <li><span> ✔ </span>Traditional and contemporary designs tailored to client preferences</li>
+                        <li><span> ✔ </span>Religious sculptures, ornamental designs, and heritage-inspired pieces</li>
+                    </ul>
+                    <!-- <img src="{% static 'images/about1.jpg'%}" alt="" class="img-thumbnail float-end" style="width: 200px;"> -->
+                </p>
+                <h3 style="margin-top: 50px;">Our Commitment to Quality & Craftsmanship</h3>
+                <img src="{% static 'images/about1.jpg'%}" alt="" class="img-thumbnail float-end" style="width: 200px; margin-left: 20px;">
+                <p style="text-align: justify; padding:0px 10px;">At Kamatchi Carvings, we believe that every piece of wood tells a story, and our mission is to enhance its natural beauty through our craftsmanship. We use only the finest quality wood, carefully sourced to ensure longevity, strength, and elegance. Whether it's teak, rosewood, or any other premium hardwood, we select materials that best suit the intricate detailing of each carving.</p>
+                <p style="text-align: justify; padding:0px 10px;">We are committed to:</p>
+                <ul style="list-style: none;">
+                    <li>✅ Delivering top-tier craftsmanship that exceeds customer expectations</li>
+                    <li>✅ Using high-quality materials for durability and aesthetic appeal</li>
+                    <li>✅ Implementing cutting-edge CNC technology for precision and efficiency</li>
+                    <li>✅ Providing customized solutions to bring our clients’ unique visions to life</li>
+                </ul>
+                <h3 style="margin-top: 50px;">Why Choose Kamatchi Carvings?</h3>
+                <ul >
+                    <li><span>Expertise & Experience </span> – With over a decade in the industry, we have mastered the art of wood carving, catering to a diverse range of projects.</li>
+                    <li><span>Customization & Creativity </span>– We bring your ideas to life with tailor-made designs that reflect your personality and style.</li>
+                    <li><span>Precision & Perfection </span>– Our CNC machines ensure flawless detailing, while our artisans add a personal touch to every piece.</li>
+                    <li><span>Timely Delivery </span> – We value your time and ensure that every project is completed with precision and efficiency.</li>
+                    <li><span>Sustainability</span> – We believe in responsible sourcing and eco-friendly practices to minimize our environmental impact.</li>
+                </ul>
+                <h3 style="margin-top: 50px;">Bring Your Vision to Life</h3>
+                <p style="text-align: justify; padding:0px 10px;">If you're looking for a unique, custom-made wood carving, Kamatchi Carvings is here to turn your ideas into reality. Whether it's a decorative wall panel, temple architecture, personalized furniture, or a statement piece for your space, we are ready to craft something extraordinary for you</p>
+                <p style="text-align: justify; padding:0px 10px;">📞 Contact us today to discuss your project, and let our expert craftsmen create a masterpiece that reflects your vision!</p>
+                <div style="display: flex; justify-content: center;">
+
+                    <img src="{% static 'images/about3.jpg' %}" alt="" class="img-thumbnail" 
+                    style="width: 200px; margin-left: 20px; transform: rotate(270deg);">
+                </div>
+            </div>
+    </div>
+</div>
+{% endblock %}

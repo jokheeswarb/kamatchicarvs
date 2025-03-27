@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div class="div" style="height:630px;margin-top: 20px; background: 
+     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+     url('{% static 'images/carvings.jpg' %}') no-repeat center center; 
+     background-size: cover; overflow: hidden;">
+    <div class="container-fluid d-flex justify-content-center" style="margin-top: 250px; color: white;">
+        <div class="text-center">
+            <h1>Welcome to the Home Page!</h1>
+            <p>Select a category to explore models:</p>
+            <div>
+                <a href="{% url 'models_2d' %}" class="btn btn-success"><i class="bi bi-grid-1x2-fill me-2"></i>2D Models</a>
+                <a href="{% url 'models_3d' %}" class="btn btn-success"><i class="bi  bi-box me-2"></i>3D Models</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
