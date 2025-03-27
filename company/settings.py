@@ -123,9 +123,15 @@ EMAIL_HOST_PASSWORD = 'rwgn qinu sici iibv'  # Your email password
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
+# Define the URL for accessing static files
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Static files location in development (optional, for local static files like CSS, JS, etc.)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Path to the static folder
+
+# Static root location where files will be collected in production (used for deployment)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This is where collectstatic will put files
+
 
 MEDIA_URL = '/media/'  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
